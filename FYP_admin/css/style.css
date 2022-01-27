@@ -1,0 +1,136 @@
+:root {
+    --main_color: #060043;
+    --main_font: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+body {
+    font-family: var(--main_font);
+}
+
+.bg-main {
+    background-color: var(--main_color);
+}
+
+.text-main {
+    color: var(--main_color);
+}
+
+.f-125 {
+    font-size: 1.25em;
+}
+
+h1 {
+    color: var(--main_color);
+}
+/* 
+a:hover {
+    text-decoration: none;
+} */
+
+/* .navbar-brand {
+    font-size: 20px;
+} */
+
+.navbar-sub {
+    /* font-size: 1.25em; */
+    letter-spacing: 0.1em;
+}
+
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.login-form form {
+    margin-bottom: 15px;
+    background: #f7f7f7;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+
+.btn-outline-main {
+    border: 2px solid;
+    border-color: var(--main_color);
+    border-radius: 50em;
+    color: var(--main_color);
+}
+
+.btn-outline-main:hover {
+    color: white;
+    background-color: var(--main_color);
+}
+
+.btn-outline-white {
+    border: 1px solid white;
+    color: white;
+    background-color: var(--main_color);
+}
+
+.btn-main {
+    background-color: var(--main_color);
+    color: white;
+    font-size: 1.5em;
+    border-radius: 0;
+}
+
+.function-box {
+    width: 250px;
+    height: auto;
+    border: 1px solid darkgray;
+    border-radius: 20px;
+    letter-spacing: 0.2em;
+}
+
+.function-box:hover {
+    box-shadow: 2px 2px 4px gray;;
+}
+
+.function-box.btn-light:hover {
+    border-color: darkgray;
+}
+
+.nav-tabs .nav-link.active {
+    color: white;
+    background-color: var(--main_color);
+}
+
+.nav-tabs .nav-link {
+    color: var(--main_color);
+}
+
+@media screen and (max-width: 400px) {
+    .navbar-brand {
+        font-size: 95%;
+    }
+}
+
+/* Start by setting display:none to make this hidden.
+Then we position it in relation to the viewport window
+with position:fixed. Width, height, top and left speak
+for themselves. Background we set to 80% white with
+our animation centered, and no-repeating */
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('../images/ajax-loader.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+    the scrollbar off with overflow:hidden */
+body.loading .modal {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+    modal element will be visible */
+body.loading .modal {
+    display: block;
+}
